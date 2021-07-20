@@ -1,0 +1,67 @@
+.main {
+    display: flex;
+    align-items: space-between;
+    flex-wrap: wrap;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 270px;
+    background: #81b29a; 
+    font-size: 25px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+button {
+    margin-left: 15px;
+    width: 260px;
+    height: 56px;
+    background: #2a9d8f;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    font-size: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+
+}
+
+/* Caso botão esteja desativado */
+button:disabled {
+    background: #eae4e9;
+    color: #000;
+    cursor: not-allowed;
+}
+
+button:active:hover {
+    filter: brightness(0.9);
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    background: #fff;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+a:hover {
+    filter: brightness(0.9);
+}
+
