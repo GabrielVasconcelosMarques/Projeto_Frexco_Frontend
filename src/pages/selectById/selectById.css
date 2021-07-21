@@ -1,0 +1,36 @@
+.dados {
+    display: flex;
+    flex-direction: column;
+    background-color: #74c69d;
+    margin-top: 10px;
+    padding: 25px;
+    justify-content: center;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    width: 200px;
+    height: 56px;
+    border-radius: 8px;
+    background: #2a9d8f;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.voltar {
+    background: #2a9d8f;
+}
+
+.editar {
+    background: #a0c4ff;
+}
+
+.excluir {
+    background: #d62828;
+}
