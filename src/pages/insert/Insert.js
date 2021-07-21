@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './insert.css';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 class CriarProduto extends Component {
     constructor(){
@@ -23,7 +23,7 @@ class CriarProduto extends Component {
 
         //verificar se o redirect é verdadeiro
         if(redirect){
-            return <Redirect to="/" />
+            return <Redirect to="/VerProduto" />
         } else {
             return(
                 <form onSubmit={this.handleSubmit}>
@@ -59,7 +59,11 @@ class CriarProduto extends Component {
                         </div>
                     </fieldset>
 
-                    <button type="submit">Cadastrar</button>
+                    <div className="back">
+                        <button type="submit">Cadastrar</button>
+                        <Link className="back-to-home"to={"/"}>Voltar</Link>
+                    </div>
+
                 </form>
             )
         }

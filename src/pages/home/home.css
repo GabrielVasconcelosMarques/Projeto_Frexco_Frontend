@@ -1,0 +1,6 @@
+.homepage {
+    display: flex;
+    max-width: 860px;
+    margin: 30px auto 0px auto;
+    justify-content: center;
+}
