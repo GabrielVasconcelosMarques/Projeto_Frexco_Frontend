@@ -3,6 +3,7 @@ import SelectAll from './pages/selectAll/SelectAll';
 import SelectById from './pages/selectById/SelectById';
 import Insert from './pages/insert/Insert';
 import Update from './pages/update/Update';
+import Delete from './pages/delete/Delete';
 
 
 
@@ -13,6 +14,7 @@ const Routes = () => (
             <Route path="/produtos/:id" component={SelectById}/>
             <Route path="/CadastrarProduto" component={Insert}/>
             <Route path="/EditarProduto/:id" component={Update}/>
+            <Route path="/DeletarProduto/:id" component={Delete}/>
         </Switch>
     </BrowserRouter>
 )

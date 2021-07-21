@@ -1,0 +1,37 @@
+.delete-area {
+    background: #94d2bd;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin: 30px auto 0px auto;
+    max-width: 860px;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.delete-area span {
+    font-size: 20px;
+}
+
+.delete-title {
+    margin-top: 20px;
+}
+
+.delete-area p{
+    font-size: 20px;
+}
+
+.delete-botao-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-button {
+    width: 240px;
+    height: 45px;
+    margin-top: 37px;
+
+}
