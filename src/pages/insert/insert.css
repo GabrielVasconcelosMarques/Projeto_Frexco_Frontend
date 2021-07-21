@@ -1,0 +1,49 @@
+form {
+    background: #94d2bd;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 860px;
+    margin: 30px auto 0px auto;
+}
+
+legend {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+form fieldset {
+    border: 0;  
+}
+
+form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    margin-left: 50px;
+   
+}
+
+form .field-group {
+    display: flex;
+}
+
+form input {
+    background-color: #fff;;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border-radius: 8px;
+    
+
+}
+
+form label {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+
