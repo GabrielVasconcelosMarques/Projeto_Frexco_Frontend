@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './insert.css';
 import { Redirect } from 'react-router-dom';
+import axios from 'axios';
 
-class CriarProduto extends Component {
-    constructor(){
-        super();
+class EditarProduto extends Component {
+    constructor(props) {
+        super(props);
 
         this.state = {
             produto : {
@@ -18,6 +18,15 @@ class CriarProduto extends Component {
         }
     }
 
+    // trazendo dados preenchidos nos campos
+    async componentDidMount(){
+        const {id} = this.props.match.params;
+        const response = await axios.get(`http://localhost:3005/sistema/produtos/${id}`);
+
+        // setando dados nos campos para edição
+        this.setState({produto: response.data});
+    }
+
     render() {
         const {redirect} = this.state;
 
@@ -28,10 +37,10 @@ class CriarProduto extends Component {
             return(
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-                        <legend>Cadastrar novo produto</legend>
+                        <legend>Editar produto</legend>
                         <div className="field">
                             <label htmlFor="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" placeholder="Insira o nome do produto" minLength="3" maxLength="100" require value={this.state.produto.nome} onChange={this.handleInputChange}/>
+                            <input type="text" id="nome" name="nome" minLength="3" maxLength="100" require value={this.state.produto.nome} onChange={this.handleInputChange}/>
                         </div>
 
                         <div className="field-group">
@@ -42,7 +51,7 @@ class CriarProduto extends Component {
 
                             <div className="field">
                                 <label htmlFor="categoria">Categoria</label>
-                                <input type="text" id="categoria" name="categoria" placeholder="Insira a categoria do produto" minLength="3" maxLength="100" require value={this.state.produto.categoria} onChange={this.handleInputChange}/>
+                                <input type="text" id="categoria" name="categoria" minLength="3" maxLength="100" require value={this.state.produto.categoria} onChange={this.handleInputChange}/>
                             </div>
                         </div>
 
@@ -59,7 +68,7 @@ class CriarProduto extends Component {
                         </div>
                     </fieldset>
 
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit">Atualizar</button>
                 </form>
             )
         }
@@ -82,22 +91,25 @@ class CriarProduto extends Component {
     };
 
     handleSubmit = event => {
-        fetch("http://localhost:3005/sistema/produtos", {
-            method: "post",
+        const {id} = this.props.match.params;
+
+        // ir no backend, e setar novos dados pelo put
+        fetch(`http://localhost:3005/sistema/produtos/${id}`, {
+            method: "put",
+            id: id,
             body: JSON.stringify(this.state.produto),
             headers: {
                 "Content-Type": "application/json"
             }
         })
         .then(data => {
-            if(data.ok) {
-                this.setState({redirect: true})
+            if(data.ok){
+                this.setState({redirect: true});
             }
         })
 
         event.preventDefault();
     }
-
 }
 
-export default CriarProduto;
+export default EditarProduto;

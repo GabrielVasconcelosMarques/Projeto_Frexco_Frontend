@@ -40,8 +40,8 @@ export default class Produto extends Component {
                 </div>
                 <div className="botoes">
                     <Link className="voltar" to={'/'}>Voltar</Link>
-                    <Link className="editar" to={`/EditarProduto/${produto.id}`}>Editar</Link>
-                    <Link className="excluir" to={`/DeletarProduto/${produto.id}`}>Excluir</Link>
+                    <Link className="editar" to={`/EditarProduto/${produto._id}`}>Editar</Link>
+                    <Link className="excluir" to={`/DeletarProduto/${produto._id}`}>Excluir</Link>
                 </div>
             </div>
         )
