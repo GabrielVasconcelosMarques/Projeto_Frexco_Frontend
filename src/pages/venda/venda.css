@@ -1,0 +1,12 @@
+.article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-To_product {
+    margin-top: 39px;
+    height: 46px;
+    width: 240px;
+}

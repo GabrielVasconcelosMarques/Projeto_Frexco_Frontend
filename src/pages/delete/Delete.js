@@ -38,7 +38,7 @@ class DeletarProduto extends Component {
                     </div>
                     <div className="delete-botao-area">
                         <button onClick={this.handleClick}>Deletar</button>
-                        <Link className="delete-button" to={"/"}>Voltar</Link>
+                        <Link className="delete-button" to={"/VerProduto"}>Voltar</Link>
                     </div>
                 </div>
             )

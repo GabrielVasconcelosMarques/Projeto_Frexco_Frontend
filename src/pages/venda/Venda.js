@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
+import './venda.css';
 
 class VenderProduto extends Component {
     constructor(props) {
@@ -45,8 +46,10 @@ class VenderProduto extends Component {
                             </div>
                     
                     </fieldset>
-
-                    <button type="submit">Vender</button>
+                    <div className="article">
+                        <button type="submit">Vender</button>
+                        <Link className="back-To_product" to={"/VerProduto"}>Voltar</Link>
+                    </div>
                 </form>
             )
         }
@@ -55,9 +58,6 @@ class VenderProduto extends Component {
     
     handleInputChange = event => {
         const target = event.target;
-
-        // pegando nome do campo digitado
-        const name = target.name;
 
         // pegando valor do campo digitado
         const value = target.value;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
+import './update.css';
 
 class EditarProduto extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ class EditarProduto extends Component {
 
         //verificar se o redirect é verdadeiro
         if(redirect){
-            return <Redirect to="/" />
+            return <Redirect to="/VerProduto" />
         } else {
             return(
                 <form onSubmit={this.handleSubmit}>
@@ -68,7 +69,10 @@ class EditarProduto extends Component {
                         </div>
                     </fieldset>
 
-                    <button type="submit">Atualizar</button>
+                    <div className="baack">
+                        <button type="submit">Atualizar</button>
+                        <Link className="delete-button" to={"/VerProduto"}>Voltar</Link>
+                    </div>
                 </form>
             )
         }
