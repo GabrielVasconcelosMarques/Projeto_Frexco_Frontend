@@ -5,6 +5,7 @@ import Insert from './pages/insert/Insert';
 import Update from './pages/update/Update';
 import Delete from './pages/delete/Delete';
 import { Home } from './pages/home/Home';
+import Venda from './pages/venda/Venda';
 
 
 
@@ -17,6 +18,7 @@ const Routes = () => (
             <Route path="/CadastrarProduto" component={Insert}/>
             <Route path="/EditarProduto/:id" component={Update}/>
             <Route path="/DeletarProduto/:id" component={Delete}/>
+            <Route path="/VendaProduto/:id" component={Venda}/>
         </Switch>
     </BrowserRouter>
 )

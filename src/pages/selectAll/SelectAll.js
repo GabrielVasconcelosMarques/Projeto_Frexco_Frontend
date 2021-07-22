@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import api from '../../services/services';
 import axios from 'axios';
 import './selectAll.css';
 
@@ -65,6 +64,7 @@ export default class Produtos extends Component {
                 <div className="botoes">
                         <button disabled={page===1} onClick={this.voltarPagina}>Anterior</button>
                         <button disabled={page===produtosInfo.pages} onClick={this.avancarPagina}>Próxima</button>
+                        <Link className="back-To-Home" to={"/"}>Home</Link>
                     </div>
             </div>
         )

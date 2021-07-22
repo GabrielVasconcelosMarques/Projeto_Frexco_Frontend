@@ -42,6 +42,7 @@ export default class Produto extends Component {
                     <Link className="voltar" to={'/'}>Voltar</Link>
                     <Link className="editar" to={`/EditarProduto/${produto._id}`}>Editar</Link>
                     <Link className="excluir" to={`/DeletarProduto/${produto._id}`}>Excluir</Link>
+                    <Link className="venda" to={`/VendaProduto/${produto._id}`}>Venda</Link>
                 </div>
             </div>
         )
